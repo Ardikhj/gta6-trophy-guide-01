@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Platinum — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23c74b28'/%3E%3Ctext x='16' y='22' font-size='15' font-family='Georgia' font-weight='bold' fill='white' text-anchor='middle'%3EVI%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <div class="brand-mark" aria-hidden="true">VI</div>
+    <div>
+      <h1>Leonida Platinum</h1>
+      <p class="subtitle">The offline guide &amp; tracker for all 55 Grand Theft Auto VI trophies on PlayStation 5</p>
+    </div>
+  </div>
+  <div class="progress-box" id="progressBox">
+    <div class="progress-numbers"><span id="earnedCount">0</span><span class="of">/ 55 earned</span></div>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+    <p class="progress-grades" id="gradeCounts">0 platinum · 0 gold · 0 silver · 0 bronze</p>
+  </div>
+</header>
+
+<nav class="tabs" id="tabs">
+  <button type="button" data-view="tracker" class="tab active">Tracker</button>
+  <button type="button" data-view="roadmap" class="tab">Roadmap to Platinum</button>
+  <button type="button" data-view="missables" class="tab">Missables <span class="tab-badge" id="missableCount">1</span></button>
+  <button type="button" data-view="sources" class="tab">Sources</button>
+</nav>
+
+<main>
+  <section id="view-tracker" class="view active">
+    <div class="controls" id="controls">
+      <label class="search-label">Search <input id="search" type="search" placeholder="Trophy, mission or keyword…" autocomplete="off"></label>
+      <label>Kind
+        <select id="kindFilter">
+          <option value="all">All kinds</option>
+          <option value="story">Story</option>
+          <option value="missable">Missable</option>
+          <option value="collectible">Collectibles</option>
+          <option value="activity">Activities</option>
+          <option value="side">Side quests</option>
+          <option value="crime">Crime &amp; robberies</option>
+          <option value="exploration">Exploration</option>
+          <option value="money">Money &amp; property</option>
+          <option value="platinum">Platinum &amp; 100%</option>
+        </select>
+      </label>
+      <label>Grade
+        <select id="gradeFilter">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="check-label"><input id="onlyMissing" type="checkbox"> Only missing</label>
+      <label class="check-label"><input id="spoilerToggle" type="checkbox" checked> Hide story spoilers</label>
+      <button id="exportBtn" type="button">Export progress</button>
+      <label class="import-label">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+      <button id="resetBtn" type="button" class="quiet">Reset</button>
+    </div>
+    <p class="list-meta" id="listMeta"></p>
+    <div class="tracker-layout">
+      <ol class="trophy-list" id="trophyList"></ol>
+      <aside class="detail" id="detailPane" aria-live="polite">
+        <p class="detail-empty">Select a trophy to read its full guide, sources and missable warning.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section id="view-roadmap" class="view">
+    <h2>Roadmap to the Platinum</h2>
+    <p class="lede">One playthrough, about 200 hours, difficulty 4/10 — PowerPyx's estimate. No online trophies, no difficulty settings, no mission medals. Cheats disable trophies and saving, so keep them off for the whole run.</p>
+    <div id="roadmapSteps"></div>
+    <h3>Golden rules before you start</h3>
+    <ul class="rules">
+      <li><strong>Keep manual saves.</strong> There is no mission replay and no New Game+. The game has 15 manual save slots plus one autosave — keep a save at the start and end of each chapter.</li>
+      <li><strong>Do the Chapter 1 meditation.</strong> Positive Mental Attitude is the only potentially missable trophy: one meditation at Jason's house exists only in Chapter 1. See the Missables tab.</li>
+      <li><strong>Scan and study as you go.</strong> Scan new vehicles with the WAiNK app (200 of 277 base models needed for 100%) and study animals with binoculars (100 of 255). Progress made during the story already counts.</li>
+      <li><strong>Do optional missions when they appear.</strong> You need any 100 for the 100% checklist and there are far more than that — they also introduce new features (fences, the Key Cloner, bank vaults).</li>
+      <li><strong>Avoid the Irredeemable profile.</strong> Your Criminal Profile is permanent at its worst level and makes police shoot on sight. See Actions Speak Louder.</li>
+    </ul>
+  </section>
+
+  <section id="view-missables" class="view">
+    <h2>Missable trophies</h2>
+    <p class="lede">Built from the official descriptions and PowerPyx's launch guide. Only one trophy can be missed; everything else can be finished in free-roam after the story.</p>
+    <div id="missableList"></div>
+    <h3>Almost missable — watch out, but not trophy-blocking</h3>
+    <ul class="rules">
+      <li><strong>Race Against Yago</strong> (Chapter 3, Yago's street-racing strand) is time-sensitive — it carries an hourglass icon. Do it when it appears; the strand counts toward Strangers &amp; Freaks.</li>
+      <li><strong>Optional missions disappear</strong> after a while (black icons with pink letters) and some quest givers go temporarily unavailable, but all trophy-related characters return later and there are far more optional missions than the 100 the checklist needs.</li>
+      <li><strong>Some fences disappear permanently</strong>, and a few magazine collectibles sit in story buildings that later close — neither affects any trophy, because new fences unlock and the magazines also spawn elsewhere.</li>
+    </ul>
+  </section>
+
+  <section id="view-sources" class="view">
+    <h2>Sources</h2>
+    <p class="lede">Every guide in this app names its sources beside it. Trophy names, descriptions and grades come from the official list as published on Exophase, cross-checked against PSNProfiles — the two agree on every name, description and grade. How-to detail comes from PowerPyx's launch-era trophy guide, written in our own words and never copied. Where even PowerPyx says a method is not yet known, the guide says so plainly instead of inventing a location.</p>
+    <ul class="source-list" id="sourceList"></ul>
+    <p class="note">This is a fan-made guide. It is not affiliated with Rockstar Games, and it uses no Rockstar logo, artwork or game screenshots. Grand Theft Auto and GTA are trademarks of Rockstar Games.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Leonida Platinum — an offline, open-source GTA VI trophy guide &amp; tracker. Progress is saved in this browser only (localStorage); nothing leaves your device. Built for the make.fun bounty <strong>gta6-trophy-guide-01</strong>.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>

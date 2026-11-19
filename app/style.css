@@ -1,0 +1,144 @@
+/* Leonida Platinum — a warm paper look of our own. No Rockstar artwork, no web fonts. */
+:root {
+  --paper: #f6f1e7;
+  --card: #fffdf7;
+  --ink: #1d2129;
+  --muted: #626a75;
+  --line: #e3dcc9;
+  --accent: #c74b28;
+  --accent-soft: #fbe9e0;
+  --gold: #b98a1d;
+  --silver: #7d8894;
+  --bronze: #a06a3b;
+  --platinum: #5f7d95;
+  --danger: #a11f1f;
+  --danger-soft: #fbe4e4;
+  --radius: 10px;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 15px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 20px 24px 14px;
+  border-bottom: 3px solid var(--accent);
+  background: var(--card);
+}
+.brand { display: flex; gap: 14px; align-items: center; }
+.brand-mark {
+  width: 52px; height: 52px; flex: none;
+  display: grid; place-items: center;
+  background: var(--accent); color: #fff;
+  font: 700 22px Georgia, serif; border-radius: 12px;
+}
+h1 { margin: 0; font: 700 30px/1.1 Georgia, "Times New Roman", serif; letter-spacing: .2px; }
+.subtitle { margin: 4px 0 0; color: var(--muted); max-width: 560px; }
+.progress-box { min-width: 260px; }
+.progress-numbers { font: 700 26px Georgia, serif; }
+.progress-numbers .of { font: 400 14px system-ui, sans-serif; color: var(--muted); margin-left: 4px; }
+.progress-bar { height: 10px; background: #e8e0cd; border-radius: 6px; overflow: hidden; margin: 6px 0; }
+.progress-fill { height: 100%; width: 0%; background: var(--accent); transition: width .25s; }
+.progress-grades { margin: 0; font-size: 12px; color: var(--muted); }
+.tabs { display: flex; gap: 4px; padding: 0 24px; background: var(--card); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 5; }
+.tab {
+  border: 0; background: none; padding: 12px 14px; cursor: pointer;
+  font: 600 14px system-ui, sans-serif; color: var(--muted);
+  border-bottom: 3px solid transparent;
+}
+.tab.active { color: var(--ink); border-bottom-color: var(--accent); }
+.tab-badge { background: var(--danger); color: #fff; border-radius: 9px; padding: 1px 7px; font-size: 11px; }
+main { padding: 20px 24px 8px; max-width: 1240px; margin: 0 auto; }
+.view { display: none; }
+.view.active { display: block; }
+h2 { font: 700 24px Georgia, serif; margin: 4px 0 8px; }
+h3 { font: 700 17px Georgia, serif; margin: 22px 0 8px; }
+.lede { color: var(--muted); max-width: 760px; }
+.controls {
+  display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center;
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 12px 14px; margin-bottom: 10px;
+}
+.controls label { font-size: 13px; font-weight: 600; color: var(--muted); display: flex; gap: 6px; align-items: center; }
+.controls input[type="search"] { width: 220px; }
+input[type="search"], select {
+  font: inherit; padding: 7px 9px; border: 1px solid #cfc7ae; border-radius: 7px; background: #fff; color: var(--ink);
+}
+.check-label { cursor: pointer; }
+button {
+  font: 600 13px system-ui, sans-serif; padding: 8px 12px; cursor: pointer;
+  border: 1px solid var(--accent); background: var(--accent); color: #fff; border-radius: 7px;
+}
+button.quiet { background: #fff; color: var(--ink); border-color: #cfc7ae; }
+.import-label { cursor: pointer; border: 1px solid #cfc7ae; background: #fff; border-radius: 7px; padding: 7px 11px; color: var(--ink); }
+.import-label input { display: none; }
+.list-meta { color: var(--muted); font-size: 13px; margin: 4px 2px 12px; }
+.tracker-layout { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 18px; align-items: start; }
+.trophy-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.trophy-card {
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 12px 14px; display: grid; grid-template-columns: auto 1fr auto; gap: 4px 12px; cursor: pointer;
+}
+.trophy-card.selected { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-soft); }
+.trophy-card.earned { background: #f3f7ee; }
+.trophy-card input[type="checkbox"] { width: 20px; height: 20px; margin-top: 4px; accent-color: var(--accent); cursor: pointer; }
+.trophy-name { font: 700 16px Georgia, serif; margin: 0; }
+.trophy-name .spoiler-tag { font: 600 11px system-ui, sans-serif; color: var(--danger); text-transform: uppercase; letter-spacing: .4px; }
+.trophy-desc { margin: 2px 0 0; color: var(--muted); font-size: 13px; }
+.trophy-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; grid-column: 2; }
+.badge {
+  font: 700 11px system-ui, sans-serif; text-transform: uppercase; letter-spacing: .4px;
+  border-radius: 20px; padding: 2px 8px; background: #eee8d6; color: #555;
+}
+.badge.platinum { background: #dfe9f0; color: var(--platinum); }
+.badge.gold { background: #f7e9bd; color: var(--gold); }
+.badge.silver { background: #e6eaee; color: var(--silver); }
+.badge.bronze { background: #f3e3d2; color: var(--bronze); }
+.badge.missable { background: var(--danger-soft); color: var(--danger); }
+.badge.kind { background: var(--accent-soft); color: var(--accent); }
+.badge.target { background: #eef3e6; color: #4a6b2f; }
+.trophy-guide-preview { grid-column: 2; margin: 6px 0 0; font-size: 13px; color: #444; }
+.detail {
+  position: sticky; top: 64px;
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 16px 18px;
+}
+.detail-empty { color: var(--muted); }
+.detail h2 { font-size: 22px; }
+.detail .official { background: var(--paper); border-left: 4px solid var(--accent); padding: 10px 12px; border-radius: 0 8px 8px 0; }
+.detail .official p { margin: 4px 0; }
+.detail .guide-text { white-space: pre-line; }
+.detail .warn {
+  background: var(--danger-soft); border: 1px solid #eec2c2; color: #6d1414;
+  border-radius: 8px; padding: 10px 12px; font-weight: 600;
+}
+.detail .sources { font-size: 13px; color: var(--muted); }
+.detail .sources a { color: var(--accent); overflow-wrap: anywhere; }
+.detail .sources li { margin-bottom: 4px; }
+.step {
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 16px 18px; margin-bottom: 12px;
+}
+.step h3 { margin-top: 0; }
+.step .step-time { color: var(--accent); font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: .4px; }
+.step ul { margin: 8px 0 0; padding-left: 20px; }
+.rules { max-width: 760px; }
+.rules li { margin-bottom: 8px; }
+.source-list li { margin-bottom: 10px; max-width: 760px; }
+.source-list a { color: var(--accent); overflow-wrap: anywhere; }
+.note { color: var(--muted); font-size: 13px; max-width: 760px; }
+footer { padding: 18px 24px 28px; color: var(--muted); font-size: 13px; max-width: 1240px; margin: 0 auto; }
+.empty { color: var(--muted); padding: 24px; text-align: center; }
+@media (max-width: 900px) {
+  .tracker-layout { grid-template-columns: 1fr; }
+  .detail { position: static; }
+  h1 { font-size: 24px; }
+  main, .top { padding-left: 14px; padding-right: 14px; }
+}
