@@ -1,6 +1,8 @@
 # Leonida Platinum — GTA VI Trophy Guide & Tracker
 
-[![make.fun](https://img.shields.io/badge/make.fun-gta6--trophy--guide--01-orange)](https://make.fun/bounty/gta6-trophy-guide-01)
+[![make.fun · gta6-trophy-guide-01](https://make.fun/badge/gta6-trophy-guide-01.svg)](https://make.fun/bounty/gta6-trophy-guide-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01)
+[![rank](https://make.fun/badge/gta6-trophy-guide-01/Ardikhj/gta6-trophy-guide-01/rank.svg)](https://make.fun/bounty/gta6-trophy-guide-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01)
+[![reward](https://make.fun/badge/gta6-trophy-guide-01/Ardikhj/gta6-trophy-guide-01/reward.svg)](https://make.fun/bounty/gta6-trophy-guide-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 An offline web app that is the best guide and tracker for the **55 PlayStation 5 trophies of Grand Theft Auto VI**: every trophy with its official name, description and grade, a checklist saved in the browser, export and import of progress, filters by kind, a spoiler setting that hides story trophies until they are earned, a roadmap to the Platinum, the missable trophies flagged, and a guide to each trophy in our own words that cites its sources.
